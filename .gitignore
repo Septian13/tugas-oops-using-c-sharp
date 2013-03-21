@@ -1,3 +1,5 @@
+Exercise 1
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,3 +43,215 @@ class Geometrical_Shape
 
     }
 }
+
+
+Exercise 2
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Exercise2
+{
+    class GameDetails
+    {
+        string Fname;
+        string Lname;
+        int NoofPlayers;
+        int Level;
+
+        public void Accept_game_details()
+        {
+            Console.WriteLine("Enter your first name:");
+            Fname = Console.ReadLine();
+            Console.WriteLine("Enter your Last name:");
+            Lname = Console.ReadLine();
+            Console.WriteLine("Enter number of players:");
+            NoofPlayers= Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter complexity level number:");
+            Level= Convert.ToInt32(Console.ReadLine());
+        }
+        public void Display_game_details()
+        {
+            Console.WriteLine("\n the details entered are as follows:");
+            Console.Write("First Name :");
+            Console.WriteLine(Fname);
+            Console.Write("Last Name :");
+            Console.WriteLine(Lname);
+            Console.Write("Number of Players :");
+            Console.WriteLine(NoofPlayers);
+            Console.Write("Level :");
+            Console.WriteLine(Level);
+        }
+    }
+    class My
+    {
+        static void Main(string[] args)
+        {
+            GameDetails Bingo = new GameDetails();
+            Bingo.Accept_game_details();
+            Bingo.Display_game_details();
+            Console.ReadLine();
+        }
+    }
+}
+
+
+Exercise 3
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace exercise_3
+{
+    class Myclass
+    {
+        static void Main()
+        {
+            string Answer = "Y";
+            string Response_code = "66";
+            int Counter = 60;
+            Console.WriteLine(Answer);
+            Console.WriteLine(Response_code);
+            Console.WriteLine(Counter);
+            Console.ReadLine();
+        }
+    }
+}
+
+
+Exercise 4
+
+using System;
+class Vehicle
+{
+    public int Number_of_tyres;
+}
+class MyVehicle
+{
+    static void Main(string[] args)
+    {
+
+        Vehicle Motorcycle = new Vehicle();
+        Vehicle Car = new Vehicle();
+        Console.WriteLine("Enter the number of wheels in a car:");
+        Car.Number_of_tyres = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter the number of wheels in a Motorcycle:");
+        Motorcycle.Number_of_tyres = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("\nThe number of wheels in a car is ");
+        Console.WriteLine(Car.Number_of_tyres); 
+        Console.WriteLine(" the number of wheels in a Car is ");
+        Console.WriteLine(Motorcycle.Number_of_tyres);
+        Console.ReadLine();
+    }
+}
+
+
+Exercise 5
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Exercise_5
+{
+    class Interchange
+    {
+        int Top_score;
+        int New_score;
+        int Temp;
+        void Swap()
+        {
+             Top_score=5;
+    	     New_score=10;
+		     Temp=Top_score;
+		     Top_score=New_score;
+         }
+        void Display()
+        {
+            Console.WriteLine("The new value of top score is:");
+            Console.WriteLine(New_score);
+            Console.ReadLine();
+            Console.WriteLine("The old value of top score was:");
+            Console.WriteLine(Top_score - Temp);
+            Console.WriteLine();
+            Console.ReadLine();
+
+        }
+
+        static void Main(string[] args)
+        {
+            Interchange I1 = new Interchange ();
+            I1.Swap();
+            I1.Display();
+            Console.ReadLine();
+
+        }
+    }
+}
+
+Exercise 6
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Exercise6
+{
+   
+    class Library
+    {
+        int ISBN;
+        string category;
+        string author;
+        int number_of_copies;
+
+            public void BookDetails()
+        {
+            Console.WriteLine("The Details of the Book Details are:");
+            Console.WriteLine(" ISBN : ");
+            Console.WriteLine(ISBN);
+            Console.ReadLine();
+            Console.WriteLine(" Category : ");
+            Console.WriteLine(category);
+            Console.ReadLine();
+            Console.WriteLine(" author : ");
+            Console.WriteLine(author);
+            Console.ReadLine();
+            Console.WriteLine (" number of copies : ");
+            Console.WriteLine(number_of_copies);
+            Console.ReadLine();
+            
+        }
+        public void GetBookDetails()
+        {
+            Console.WriteLine("Enter The details of book");
+            Console.WriteLine(" \n Enter Number of ISBN: ");
+            ISBN = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(" Enter Category < fiction or Nonfiction > :");
+            category = Console.ReadLine();
+            Console.WriteLine(" Enter the author : ");
+            author = Console.ReadLine();
+            Console.WriteLine(" Enter number of copies : ");
+            number_of_copies = Convert.ToInt32(Console.ReadLine());
+            Console.ReadLine();
+
+        }
+      public static void Main(string[] args)
+        {
+            Library P1 = new Library();
+            P1.GetBookDetails();
+            P1.BookDetails();
+            Console.ReadLine();
+        }
+    }
+}
+
+
